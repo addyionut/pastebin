@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Handling Form Submission</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h1>Result</h1>
+<p th:text="'Author name: ' + ${pastebinResult.name}" />
+<p th:text="'Paste name: ' + ${pastebinResult.pasteName}" />
+<p th:text="'Paste content: ' + ${pastebinResult.content}" />
+<p th:text="'Paste date: ' + ${pastebinResult.pasteDate}" />
+<a href="/pastebinEndpoint">Add a new paste</a>
+<a href="/all">View all pastes</a>
+</body>
+</html>
