@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Paste</title>
+    </head>
+    <body>
+        <table class="table table-striped table-responsive-md">
+            <thead>
+                <tr>
+                    <th>Author Name</th>
+                    <th>Date</th>
+                    <th>Paste Title</th>
+                    <th>Paste Content</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="currentPastebin : ${pasteBin}">
+                    <td th:text="${currentPastebin.name}"></td>
+                    <td th:text="${currentPastebin.pasteDate}"></td>
+                    <td th:text="${currentPastebin.pasteName}"></td>
+                    <td th:text="${currentPastebin.content}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
