@@ -11,7 +11,7 @@ import java.util.Date;
 @Entity // This tells Hibernate to make a table out of this class
 public class Pastebin {
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     private String authorName;
     private String pasteName;
@@ -33,6 +33,7 @@ public class Pastebin {
     public void setName(String authorName) {
         this.authorName = authorName;
     }
+
     public String getPasteName() {
         return pasteName;
     }
