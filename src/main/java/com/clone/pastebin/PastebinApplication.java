@@ -10,5 +10,4 @@ public class PastebinApplication {
 		SpringApplication.run(PastebinApplication.class, args);
 		//System.out.println("Succeeded!");
 	}
-
 }

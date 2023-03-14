@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+    <head>
+        <title>All Paste</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <table class="table table-striped table-responsive-md">
+            <thead>
+                <tr>
+                    <th>Author Name</th>
+                    <th>Date</th>
+                    <th>Paste Title</th>
+                    <th>Paste Content</th>
+                    <th>Link</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="pastebinResult : ${pasteBin}">
+                    <td th:text="${pastebinResult.name}"></td>
+                    <td th:text="${pastebinResult.pasteDate}"></td>
+                    <td th:text="${pastebinResult.pasteName}"></td>
+                    <td th:text="${pastebinResult.content}"></td>
+                    <td><a href="/accessPaste/{id}(id=${pastebinResult.id})">Access paste</a></td>
+                </tr>
+            </tbody>
+        </table>
+        <a href="/paste/add">Add a new paste</a>
+    </body>
+</html>

@@ -13,7 +13,7 @@ public class Pastebin {
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
     private Integer id;
-    private String name;
+    private String authorName;
     private String pasteName;
     private String content;
     private LocalDate pasteDate;
@@ -21,8 +21,17 @@ public class Pastebin {
     public Integer getId() {
         return id;
     }
+
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public String getName() {
+        return authorName;
+    }
+
+    public void setName(String authorName) {
+        this.authorName = authorName;
     }
     public String getPasteName() {
         return pasteName;
@@ -38,14 +47,6 @@ public class Pastebin {
 
     public void setContent(String content) {
         this.content = content;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public LocalDate getPasteDate() {
